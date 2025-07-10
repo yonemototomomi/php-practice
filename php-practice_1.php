@@ -202,23 +202,23 @@ function evaluateGrade($score){
   switch ($score) {
       case 'A':
       case 'B':
-          echo '合格です。';
-          break;
+          return '合格です。';
 
       case 'C':
-          echo '合格ですが追加課題があります。';
-          break;
+          return '合格ですが追加課題があります。';
 
       case 'D':
-          echo '不合格です。';
-          break;
+          return '不合格です。';
 
       default:
-          echo '判定不明です。講師に問い合わせてください。';
-          break;
+          return '判定不明です。講師に問い合わせてください。';
   }
 }
 
-evaluateGrade('A')
-evaluateGrade('Y')
+$result = evaluateGrade('A');
+echo $result;
+
+$result = evaluateGrade('Y');
+echo $result;
+
 ?>
