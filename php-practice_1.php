@@ -148,13 +148,18 @@ hello('安藤');
 // 最終的に、下記のような文章を表示してください。
 // 出力例:1000円の商品の税込価格は1100円です。
 
-function nedan($price) {
+function calcTaxInPrice($price) {
     $taxRate = 0.1;
-    $calcTaxInPrice = $price + ($price * $taxRate);
-    echo $price . '円の商品の税込価格は' . $calcTaxInPrice . '円です。' . "\n";
+    $taxInPrice = $price + ($price * $taxRate);
+    return round($taxInPrice);
 }
 
-nedan(1000);
+$price = 1000;
+
+$taxInPrice = calcTaxInPrice($price);
+
+echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。' . "\n";
+
 
 // Q12 関数とif文
 // 数字を奇数か偶数か判別する関数を作成します。条件のもと処理を記述しましょう。
