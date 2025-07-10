@@ -34,14 +34,10 @@ echo '現在時刻は、' . $now . 'です。';
 
 $device = 'mac' ;
 
-if ($device === 'windows') {
-    echo '使用OSは、windowsです。' ;
+if ($device === 'windows' || $device === 'mac') {
+    echo '使用OSは、' . $device . 'です。';
 } else {
-    if ($device === 'mac') {
-        echo '使用OSは、macです。';
-    } else {
-        echo 'どちらでもありません。';
-    }
+    echo 'どちらでもありません。';
 }
 
 
